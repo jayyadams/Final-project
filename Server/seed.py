@@ -333,7 +333,7 @@ if __name__ == '__main__':
             customer = Customer(
                 name="Guest",
                 user_name="Guest1",
-                password="12345qwert!@",
+                password="12345QWERT!@",
                 email="example@example.com",
                 age= 26,
                 membership=False,
