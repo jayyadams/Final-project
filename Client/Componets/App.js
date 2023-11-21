@@ -6,7 +6,7 @@ import Login from './Login';
 import StoreFront from './StoreFront';
 import Inventory from './Inventory';
 import Cart from './Cart';
-import playerDetails from './PlayerDetails';
+import PlayerDetails from './PlayerDetails';
 import RegistrationForm from './RegistrationForm';
 import StoreLogForm from './StoreLogForm';
 import LoginForm from './LoginForm';

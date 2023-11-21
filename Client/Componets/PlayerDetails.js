@@ -1,9 +1,9 @@
 import { useState } from "react";
 import React from "react";
 
-function PlayerDetails({ description, name, price, quantity, store, type, img }) {
+function PlayerDetails({ team, name, price, avg_points, pos_rank, position, img }) {
 
-    // console.log(store)
+
     const [isFlipped, setIsFlipped] = useState(false);
     const [inCart, setInCart] = useState(false);
 
@@ -28,10 +28,11 @@ function PlayerDetails({ description, name, price, quantity, store, type, img })
                 </div>
                 <div className="card-back">
                     <p>{name}</p>
-                    <h5>{description}</h5>
+                    <h5>{position}</h5>
+                    <p>{pos_rank}</p>
+                    <p>{team}</p>
+                    <p>{avg_points}</p>
                     <p>price: ${price.toFixed(2)}</p>
-                    <p>{quantity}</p>
-                    <p>{type}</p>
                     {inCart ? (
                         <button onClick={addToCart}>Remove from Cart</button>
                     ) : (
@@ -44,4 +45,4 @@ function PlayerDetails({ description, name, price, quantity, store, type, img })
 }
 
 
-            export default PlayerDetails
+export default PlayerDetails
