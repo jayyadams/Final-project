@@ -1,7 +1,7 @@
 import React from "react";
 import PlayerDetails from "./PlayerDetails";
 import StoreFront from "./StoreFront";
-import Cart from "./Cart";
+// import Cart from "./Cart";
 
 function Inventory({ playersArr }) {
 
@@ -10,8 +10,8 @@ function Inventory({ playersArr }) {
             key={player.id}
             pId={player.id}
             name={player.name}
-            pos_rank={player.pos_rank}
             position={player.position}
+            pos_rank={player.pos_rank}
             team={player.team}
             avg_points={player.avg_points}
             price={player.price}

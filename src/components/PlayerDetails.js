@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
 
+
 function PlayerDetails({ team, name, price, avg_points, pos_rank, position, img }) {
 
 

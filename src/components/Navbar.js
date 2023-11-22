@@ -20,7 +20,7 @@ function Navbar({ playersArr, setSearchTerm, storeLogged }) {
   }
 
 
-  const nav = (toggle ? <button className="login-butt" id="navButton" onClick={toggleNav}>Navigation</button> :
+  const nav = (toggle ? <button className="tool-button" id="navButton" onClick={toggleNav}>ToolBar</button> :
     <nav id="navbar" >
       <div className="navbar">
         <button id="closebtn" onClick={toggleNav}>X</button>

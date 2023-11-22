@@ -27,8 +27,8 @@ function StoreFront({ playersArr, searchTerm }) {
         return <HomePlayers
             key={homePlayerObj.id}
             name={homePlayerObj.name}
-            pos_rank={homePlayerObj.pos_rank}
             position={homePlayerObj.position}
+            pos_rank={homePlayerObj.pos_rank}
             team={homePlayerObj.team}
             avg_points={homePlayerObj.avg_points}
             price={homePlayerObj.price}
@@ -40,7 +40,7 @@ function StoreFront({ playersArr, searchTerm }) {
 
     return (
         <>
-            <div className="home-player-container">
+            <div className="front-players">
                 {mappedHomePlayers}
             </div>
         </>

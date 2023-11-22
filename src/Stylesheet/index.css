@@ -1,0 +1,75 @@
+.navbar {
+  background-color: teal; /* Set the background color of the navbar */
+  overflow: hidden; /* Ensure that content doesn't overflow the navbar */
+}
+
+.navbar a {
+  float: left; /* Make the list items float to the left */
+  display: block; /* Make the links block-level elements */
+  color: white; /* Set the text color of the links */
+  text-align: center; /* Center-align the text */
+  padding: 14px 16px; /* Add padding to create space around the links */
+  text-decoration: none; /* Remove underlines from the links */
+}
+
+.navbar a:hover {
+  background-color: #ddd; /* Change the background color on hover */
+  color: black; /* Change the text color on hover */
+}
+
+/* Clear floats after the navbar */
+.navbar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.login-butt{
+  color:white;
+  background-color: black;
+  float: auto;
+}
+
+.tool-button{
+  color:white;
+  background-color: red;
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 200px;
+  overflow: none;
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+}
+.home-player-info {
+  position: relative;
+  overflow: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: transparent;
+  background-color:rgba(132, 61, 153, 0.342);
+  margin: auto;
+  padding: 15px 10px;
+  min-height: 625px;
+  font-weight: bold;
+  font-style: italic;
+  color: #000000;
+}
+.home-player-info{
+  position: relative;
+  width: 240px; 
+  height: 276.8px; 
+}
+.player-img {
+  width: 200px;
+  height:200px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
