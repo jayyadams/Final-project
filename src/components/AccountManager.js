@@ -35,6 +35,7 @@ function AccountManager({ loggedInID, loggedIn, setLoggedIn }) {
             const changedFields = {};
 
             // Compare each field in newData with custData and add changed ones to changedFields
+
             for (const key in newData) {
                 if (newData[key] !== custData[key]) {
                     changedFields[key] = newData[key];
@@ -48,8 +49,10 @@ function AccountManager({ loggedInID, loggedIn, setLoggedIn }) {
                 body: JSON.stringify(changedFields),
             });
 
+
+            // // ReFetch Updated Data
+
             if (response.ok) {
-                // // ReFetch Updated Data
                 fetch(`customers/${loggedInID}`)
                     .then((resp) => resp.json())
                     .then(setCustData);

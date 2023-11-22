@@ -40,7 +40,7 @@ function Navbar({ playersArr, setSearchTerm, storeLogged }) {
   return (
     <div id="navarea">
       <button className="login-butt" onClick={toggleSearch}>Search</button>
-      {searchToggle ? <Search setSearchTerm={setSearchTerm}  playersArr={playersArr} /> : null}
+      {searchToggle ? <Search setSearchTerm={setSearchTerm} playersArr={playersArr} /> : null}
       {nav}
     </div>
   );

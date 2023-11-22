@@ -13,6 +13,7 @@ import LoginForm from './LoginForm';
 import AccountManager from './AccountManager';
 // import CartImage from './CartImage';
 import "../Stylesheet/index.css";
+import About from './About';
 
 
 function App() {
@@ -46,8 +47,6 @@ function App() {
             .then(setCustomer);
     }, [storeLogged]);
 
-//  
-
 
     const filteredCustomerIDs = customerArr.filter((customer) => customer.id === loggedInID).map((customer) => customer.id);
 
@@ -57,7 +56,7 @@ function App() {
     return (
         <>
             <header>
-                <img src="./images/updatedheader.png" alt=''></img>
+                <img src="./images/" alt=''></img>
             </header>
             <div id='bannerdiv'>
                 <Navbar storeLogged={storeLogged} setSearchTerm={setSearchTerm} playersArr={players} />
@@ -72,8 +71,9 @@ function App() {
                     <Route exact path="/customers"><Account customerArr={customerArr} stores={stores} /></ Route>
                     <Route exact path="/Register" component={RegistrationForm} />
                     <Route exact path="/CustomerLogin" ><LoginForm setLoggedInID={setLoggedInID} setLoggedIn={setLoggedIn} loggedIn={loggedIn} /> </Route>
-                    <Route exact path="/StoreLogin"><StoreLogForm storeLogged={storeLogged} setStoreLoggedIn={setStoreLoggedIn} /></Route> 
-                    {/* <Route exact path="/cart" component={CartImage} /> */}
+                    <Route exact path="/StoreLogin"><StoreLogForm storeLogged={storeLogged} setStoreLoggedIn={setStoreLoggedIn} /></Route>
+                    <Route exact path="/About" component={About} /> 
+                    {/* <Route exact path="/Cart" component={CartImage} /> */}
                 
                 </Switch>
             </div>

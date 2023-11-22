@@ -1,14 +1,20 @@
 import React, {useState, useEffect}from "react";
 
-function Search({ playersArr, setSearchTerm, }){
+function Search({ setSearchTerm }){
 
-    // const handleSubmit = (e) => {
+    // const handleChange = (e) => {
+    //     setSearchTerm(e.target.value);
+    
+    //     onSearch(e.target.value);
+    //   }
+    
+    //   const handleSubmit = (e) => {
     //     e.preventDefault();
-    //     onSearch(searchText);
+    //     onSearch(searchTerm);
     //   }
     
     
-    return(
+      return(
         <input className="searcher"
         type="text" 
         name="searchBar" 
