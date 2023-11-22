@@ -4,7 +4,7 @@ function Checkout() {
     return (
     <div align='center'>
         <img src="/images/cart.gif" />
-        <h2>Cart... what cart?</h2>
+        <h2>Cart...?</h2>
     </div>
 )}
 

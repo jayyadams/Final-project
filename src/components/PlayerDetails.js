@@ -31,8 +31,8 @@ function PlayerDetails({ team, name, price, avg_points, pos_rank, position, img 
                     <p>{name}</p>
                     <h5>{position}</h5>
                     <p>{pos_rank}</p>
-                    <p>{team}</p>
                     <p>{avg_points}</p>
+                    <p>{team}</p>
                     <p>price: ${price.toFixed(2)}</p>
                     {inCart ? (
                         <button onClick={addToCart}>Remove from Cart</button>

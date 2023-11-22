@@ -6,7 +6,7 @@ import StoreFront from "./StoreFront";
 function Inventory({ playersArr }) {
 
     const mappedPlayersArr = playersArr.map((player) => {
-        return <playerDetails
+        return <PlayerDetails
             key={player.id}
             pId={player.id}
             name={player.name}
