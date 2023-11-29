@@ -17,7 +17,6 @@ function Cart({ customer_id }) {
                 const resp = await fetch(`/carts/customer_${customerID}`);
                 if (resp.status === 404) {
 
-                    // Cart doesn't exist, create a new one!
 
                     setIsCart(true);
                     const createResponse = await createNewCart(customerID);
@@ -63,10 +62,10 @@ function Cart({ customer_id }) {
     return (
         <div id="cartbutt">
             <Link to="/cart"><button className="login-butt">View Cart</button></Link>
-            <CartItems
+            {/* <CartItems
                 items={cart.items}
                 customer={cart.customer}
-            />
+            /> */}
         </div>
     )
 }

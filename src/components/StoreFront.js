@@ -11,10 +11,12 @@ function StoreFront({ playersArr, searchTerm }) {
 
     const filteredArr = playersArr.filter(playerobj => {
                 
-        return  playerobj.name.toLowerCase().includes(searchTerm.toLowerCase()) || playerobj.price.toString().includes(searchTerm) || playerobj.type.toLowerCase().includes(searchTerm.toLowerCase())
+        return  playerobj.name && playerobj.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                playerobj.price && playerobj.price.toString().includes(searchTerm) ||
+                playerobj.type && playerobj.type.toLowerCase().includes(searchTerm.toLowerCase())
 
                 
-          // playerobj.quantitiy.toLowerCase().includes(searchTerm.toLowerCase()) || playerobj.store.toLowerCase().includes(searchTerm.toLowerCase()) ||  playerobj.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        //   playerobj.team.toLowerCase().includes(searchTerm.toLowerCase()) || playerobj.position.toLowerCase().includes(searchTerm.toLowerCase()) ||  playerobj.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 
     })
     

@@ -1,21 +1,12 @@
-import React, {useState, useEffect}from "react";
+import React, {useState, useEffect} from "react";
 
-function Search({ setSearchTerm }){
+function Search({ setSearchTerm, playersArr }){
+    
 
-    // const handleChange = (e) => {
-    //     setSearchTerm(e.target.value);
-    
-    //     onSearch(e.target.value);
-    //   }
-    
-    //   const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     onSearch(searchTerm);
-    //   }
-    
-    
+
+
       return(
-        <input className="searcher"
+        <input className="searches"
         type="text" 
         name="searchBar" 
         placeholder="Search..." 

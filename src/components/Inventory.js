@@ -1,7 +1,7 @@
 import React from "react";
 import PlayerDetails from "./PlayerDetails";
 import StoreFront from "./StoreFront";
-// import Cart from "./Cart";
+import Cart from "./Cart";
 
 function Inventory({ playersArr }) {
 

@@ -5,13 +5,13 @@ import Navbar from './Navbar';
 import Login from './Login';
 import StoreFront from './StoreFront';
 import Inventory from './Inventory';
-// import Cart from './Cart';
+import Cart from './Cart';
 import PlayerDetails from './PlayerDetails';
 import RegistrationForm from './RegistrationForm';
 import StoreLogForm from './StoreLogForm';
 import LoginForm from './LoginForm';
 import AccountManager from './AccountManager';
-// import CartImage from './CartImage';
+import CartImage from './CartImage';
 import "../Stylesheet/index.css";
 import About from './About';
 
@@ -61,7 +61,7 @@ function App() {
             <div id='bannerdiv'>
                 <Navbar storeLogged={storeLogged} setSearchTerm={setSearchTerm} playersArr={players} />
                 <Login loggedIn={loggedIn} storeLogged={storeLogged} setStoreLoggedIn={setStoreLoggedIn} />
-                {/* <Cart customer_id={filteredCustomerIDs[0]} /> */}
+                <Cart customer_id={filteredCustomerIDs[0]} />
             </div>
             <div id='maindiv'>
                 <Switch>
@@ -73,7 +73,7 @@ function App() {
                     <Route exact path="/CustomerLogin" ><LoginForm setLoggedInID={setLoggedInID} setLoggedIn={setLoggedIn} loggedIn={loggedIn} /> </Route>
                     <Route exact path="/StoreLogin"><StoreLogForm storeLogged={storeLogged} setStoreLoggedIn={setStoreLoggedIn} /></Route>
                     <Route exact path="/About" component={About} /> 
-                    {/* <Route exact path="/Cart" component={CartImage} /> */}
+                    <Route exact path="/Cart" component={CartImage} />
                 
                 </Switch>
             </div>
