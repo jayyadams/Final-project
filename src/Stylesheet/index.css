@@ -1,6 +1,7 @@
 .navbar {
   background-color: teal; /* Set the background color of the navbar */
   overflow: hidden; /* Ensure that content doesn't overflow the navbar */
+  position: fixed;
 }
 
 .navbar a {
@@ -401,4 +402,16 @@ input {
 
 .front-players {
   margin-top: 20px;
+}
+
+.search-bar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; 
+  background-color: #fff; 
+  padding: 10px;
+  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }

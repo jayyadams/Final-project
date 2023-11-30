@@ -10,6 +10,7 @@ function StoreFront({ playersArr, searchTerm }) {
         answer2: false,
         answer3: false,
         answer4: false,
+        answer5: false,
       });
 
       const toggleAnswerVisibility = (answerId) => {
@@ -101,6 +102,16 @@ function StoreFront({ playersArr, searchTerm }) {
             </button>
             {answerVisibility.answer4 && (
               <p className="answerText">Put up goal posts.</p>
+            )}
+          </li>
+
+          <li className="jokeItem">
+            <p className="jokeText">Whos going to win the superbowl this year?</p>
+            <button className="answerButton" onClick={() => toggleAnswerVisibility('answer5')}>
+              {answerVisibility.answer5 ? 'Hide Answer' : 'Show Answer'}
+            </button>
+            {answerVisibility.answer5 && (
+              <p className="answerText">NOT THE GIANTS OR COWBOYS LOL</p>
             )}
           </li>
         </ul>

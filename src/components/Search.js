@@ -6,7 +6,7 @@ function Search({ setSearchTerm, playersArr }){
 
 
       return(
-        <input className="searches"
+        <input className="search-bar"
         type="text" 
         name="searchBar" 
         placeholder="Search..." 
