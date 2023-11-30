@@ -28,7 +28,6 @@ function StoreFront({ playersArr, searchTerm }) {
                 playerobj.type && playerobj.type.toLowerCase().includes(searchTerm.toLowerCase())
 
                 
-        //   playerobj.team.toLowerCase().includes(searchTerm.toLowerCase()) || playerobj.position.toLowerCase().includes(searchTerm.toLowerCase()) ||  playerobj.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 
     })
     
