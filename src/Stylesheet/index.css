@@ -24,7 +24,6 @@
   clear: both;
 }
 
-
 .login-butt{
   color:white;
   background-color: black;
@@ -36,46 +35,370 @@
   background-color: red;
 }
 
-.home-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 200px;
-  overflow: none;
-  height: 200px;
+.about-div {
+  text-align: center;
+  padding: 20px;
+}
+
+.about-div img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-div h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
   width: 200px;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 150px; /* Set a fixed height for the images */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h1,
+.card h3,
+.card p,
+.card h6 {
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(180deg, #4a90e2, #63a69f); /* Example gradient, adjust as needed */
+  color: #333; /* Text color for better readability on the background */
+}
+
+header {
+  background-color: #333;
+  color: white;
   padding: 10px;
   text-align: center;
 }
-.home-player-info {
+
+#bannerdiv {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px;
+}
+
+#bannerdiv img {
+  height: 40px; /* Adjust the height as needed */
+  margin-right: 20px;
+}
+
+#maindiv {
+  padding: 20px;
+}
+
+.header {
   position: relative;
-  overflow: none;
+  background: linear-gradient(90deg, #ff4500, #ff8c00, #ff4500); /* Example gradient, adjust as needed */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.header img {
+  height: 100px; /* Adjust the height as needed */
+  margin-right: 20px;
+  animation: rotate 3s infinite linear; /* Example animation, adjust as needed */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Changesform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5; /* Background color for the entire page */
+  font-family: 'Arial', sans-serif;
+}
+
+.ChangesDiv {
+  max-width: 400px;
   width: 100%;
-  max-width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.NameChanges,
+.EmailChanges,
+.UsernameChanges,
+.PassChanges {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+.NameChangesinfo,
+.EmailChangesinfo,
+.UsernameChangesinfo,
+.PassChangesinfo {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.MakeChanges,
+.LogoutChanges {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.MakeChanges:hover,
+.LogoutChanges:hover {
+  background-color: #2980b9;
+}
+
+.reginput {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
   box-sizing: border-box;
-  border: transparent;
-  background-color:rgba(132, 61, 153, 0.342);
-  margin: auto;
-  padding: 15px 10px;
-  min-height: 625px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#showPasswrd {
+  background-color: #95a5a6;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#showPasswrd:hover {
+  background-color: #7f8c8d;
+}
+
+.EditAccPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5; /* Background color for the entire page */
+  font-family: 'Arial', sans-serif;
+}
+
+.form-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+h2.EditAcc {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.ShowPass {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ShowPass:hover {
+  background-color: #2980b9;
+}
+
+.regbutt {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.regbutt:hover {
+  background-color: #2980b9;
+}
+
+.retbutt {
+  background-color: #95a5a6;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.retbutt:hover {
+  background-color: #7f8c8d;
+}
+
+.headerhome {
+  font-size: 2rem;
   font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.Joke-cont {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.Jokes {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.Answer {
   font-style: italic;
-  color: #000000;
+  color: #777;
+  margin-bottom: 15px;
 }
-.home-player-info{
-  position: relative;
-  width: 240px; 
-  height: 276.8px; 
+
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.home-player-info {
+  text-align: center;
+}
+
 .player-img {
-  width: 200px;
-  height:200px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
-.about-div {
-  margin: auto;
-  border: 5px solid;
-  width: 50%;
-  padding:20px;
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.headerhome {
+  font-size: 36px;
+  color: #3498db;
+  text-align: center;
+}
+
+.jokeList {
+  list-style: none;
+  padding: 0;
+}
+
+.jokeItem {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.jokeText {
+  font-size: 18px;
+  color: #2ecc71;
+  margin-bottom: 10px;
+}
+
+.answerButton {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.answerText {
+  font-size: 16px;
+  color: #e74c3c;
+  margin-top: 10px;
+}
+
+.front-players {
+  margin-top: 20px;
 }

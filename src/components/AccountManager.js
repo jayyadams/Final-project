@@ -74,33 +74,33 @@ function AccountManager({ loggedInID, loggedIn, setLoggedIn }) {
     }
     const logOut = (e) => {
         setLoggedIn(!loggedIn)
-        history.push('/CustomerLogin')
+        history.push('/')
     }
 
-    console.log(makeChanges)
+    // console.log(makeChanges)
     return (
-        <div className="loginform">{makeChanges ?
-            <div className="centered-content">
-                <h1 className="login">Name:</h1>
-                <p className="login">{custData.name}</p>
+        <div className="Changesform">{makeChanges ?
+            <div className="ChangesDiv">
+                <h1 className="NameChanges">Name:</h1>
+                <p className="NameChangesinfo">{custData.name}</p>
                 <br />
-                <h1 className="login">Email:</h1>
-                <p className="login">{custData.email}</p>
+                <h1 className="EmailChanges">Email:</h1>
+                <p className="EmailChangesinfo">{custData.email}</p>
                 <br />
-                <h1 className="login">UserName:</h1>
-                <p className="login">{custData.user_name}</p>
+                <h1 className="UsernameChanges">UserName:</h1>
+                <p className="UsernameChangesinfo">{custData.user_name}</p>
                 <br />
-                <h1 className="login">Password</h1>
-                <p className="login">{custData.password}</p>
-                <button className="login" onClick={() => setMakeChanges(!makeChanges)}>Make Changes</button>
+                <h1 className="PassChanges">Password:</h1>
+                <p className="PassChangesinfo">{custData.password}</p>
+                <button className="MakeChanges" onClick={() => setMakeChanges(!makeChanges)}>Make Changes</button>
                 <br/>
-                <button className="login" onClick={logOut}>Logout</button>
+                <button className="LogoutChanges" onClick={logOut}>Logout</button>
             </div> :
             <div>
-                <h2 className="login" align = 'center'>Edit Account</h2>
+                <h2 className="EditAcc" align = 'center'>Edit Account</h2>
                 <form id="regform" name="form" onSubmit={updateInfo}>
                     Name:<input
-                        className="reginput"
+                        className="nameinput"
                         type="text"
                         name="name"
                         placeholder={custData.name}
@@ -109,33 +109,33 @@ function AccountManager({ loggedInID, loggedIn, setLoggedIn }) {
                     />
                     <br />
                     Username:<input
-                        className="reginput"
+                        className="usernameinput"
                         type="text"
                         name="username"
                         placeholder={custData.user_name}
                         value={newData.user_name}
                         onChange={handleChange} />
                     Password: <input
-                        className="reginput"
+                        className="passwordinput"
                         type={showPassword ? "text" : "password"}
                         name="password"
                         placeholder={custData.password}
                         value={newData.password}
                         onChange={handleChange}
                     />
-                    <button className="login" type='button' id="showPasswrd" onClick={() => setShowPassword(!showPassword)}>show password</button>
+                    <button className="ShowPass" type='button' id="showPasswrd" onClick={() => setShowPassword(!showPassword)}>show password</button>
                     <br />
                     Email: <input
-                        className="reginput"
+                        className="emailinput"
                         type="text"
                         name="email"
                         placeholder={custData.email}
                         value={newData.email}
                         onChange={handleChange} />
                     <br />
-                    <input className="login" id="register" type="submit" name="Register" ></input>
+                    <input className="regbutt" id="register" type="submit" name="Register" ></input>
                     <br />
-                    <button className="login" type="button" onClick={() => setMakeChanges(!makeChanges)}>Return</button>
+                    <button className="retbutt" type="button" onClick={() => setMakeChanges(!makeChanges)}>Return</button>
                 </form>
             </div>}
 

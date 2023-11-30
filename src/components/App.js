@@ -16,6 +16,7 @@ import "../Stylesheet/index.css";
 import About from './About';
 
 
+
 function App() {
 
 
@@ -26,6 +27,7 @@ function App() {
     const [loggedIn, setLoggedIn] = useState(false)
     const [searchTerm, setSearchTerm] = useState("")
     const [storeLogged, setStoreLoggedIn] = useState(false)
+    
     
 //    ----------FETCHES--------------
 
@@ -52,13 +54,15 @@ function App() {
 
     // console.log(loggedInID)
 
-    console.log(storeLogged)
+    // console.log(storeLogged)
+      
     return (
         <>
-            <header>
-                <img src="./images/" alt=''></img>
+            <header className='header'>
+                <img src="./images/Header.png" alt=''></img>
             </header>
             <div id='bannerdiv'>
+                {/* <img src="./images/navbar.png" alt=''></img> */}
                 <Navbar storeLogged={storeLogged} setSearchTerm={setSearchTerm} playersArr={players} />
                 <Login loggedIn={loggedIn} storeLogged={storeLogged} setStoreLoggedIn={setStoreLoggedIn} />
                 <Cart customer_id={filteredCustomerIDs[0]} />
@@ -71,12 +75,12 @@ function App() {
                     <Route exact path="/customers"><Account customerArr={customerArr} stores={stores} /></ Route>
                     <Route exact path="/Register" component={RegistrationForm} />
                     <Route exact path="/CustomerLogin" ><LoginForm setLoggedInID={setLoggedInID} setLoggedIn={setLoggedIn} loggedIn={loggedIn} /> </Route>
+                    <Route exact path="/Cart" component={CartImage} />
                     <Route exact path="/StoreLogin"><StoreLogForm storeLogged={storeLogged} setStoreLoggedIn={setStoreLoggedIn} /></Route>
                     <Route exact path="/About" component={About} /> 
-                    <Route exact path="/Cart" component={CartImage} />
-                
                 </Switch>
             </div>
+           
         </>
     )
 };
