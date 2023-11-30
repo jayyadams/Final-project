@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import Search from "./Search";
+import { SearchContext } from "../Helpers/Context";
 
-function Navbar({ playersArr, setSearchTerm, storeLogged }) {
+function Navbar({ playersArr, storeLogged }) {
 
   const [toggle, setToggle] = useState(true)
   const [searchToggle, setToggleSearch] = useState(false)
- 
+  const {SearchTerm, setSearchTerm} = useContext(SearchContext)
 
   function toggleNav(e) {
     e.preventDefault()
@@ -32,17 +33,15 @@ function Navbar({ playersArr, setSearchTerm, storeLogged }) {
       </div>
     </nav>)
 
-  
-
-
-  // console.log(toggle)
  
   return (
-    <div id="navarea">
-      <button className="login-butt" onClick={toggleSearch}>Search</button>
-      {searchToggle ? <Search setSearchTerm={setSearchTerm} playersArr={playersArr} /> : null}
-      {nav}
-    </div>
+    
+      <div id="navarea">
+        <button className="login-butt" onClick={toggleSearch}>Search</button>
+        {searchToggle ? <Search setSearchTerm={setSearchTerm} playersArr={playersArr} /> : null}
+        {nav}
+      </div>
+    
   );
 }
 

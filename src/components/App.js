@@ -14,12 +14,12 @@ import AccountManager from './AccountManager';
 import CartImage from './CartImage';
 import "../Stylesheet/index.css";
 import About from './About';
-
+import { SearchContext } from '../Helpers/Context';
 
 
 function App() {
-
-
+    
+    
     const [players, setPlayers] = useState([]);
     const [stores, setStores] = useState([])
     const [customerArr, setCustomer] = useState([]);
@@ -27,43 +27,43 @@ function App() {
     const [loggedIn, setLoggedIn] = useState(false)
     const [searchTerm, setSearchTerm] = useState("")
     const [storeLogged, setStoreLoggedIn] = useState(false)
+  
     
+    //    ----------FETCHES--------------
     
-//    ----------FETCHES--------------
-
     useEffect(() => {
         fetch('/stores')
-            .then((resp) => resp.json())
-            .then(setStores)
+        .then((resp) => resp.json())
+        .then(setStores)
     }, [])
-
+    
     useEffect(() => {
         fetch('/items')
-            .then((resp) => resp.json())
-            .then(setPlayers);
+        .then((resp) => resp.json())
+        .then(setPlayers);
     }, []);
-
+    
     useEffect(() => {
         fetch('/customers')
-            .then((resp) => resp.json())
-            .then(setCustomer);
+        .then((resp) => resp.json())
+        .then(setCustomer);
     }, [storeLogged]);
-
-
+    
+    
     const filteredCustomerIDs = customerArr.filter((customer) => customer.id === loggedInID).map((customer) => customer.id);
-
+    
     // console.log(loggedInID)
-
+    
     // console.log(storeLogged)
-      
+    
     return (
-        <>
+        <SearchContext.Provider value={{searchTerm, setSearchTerm}}>
             <header className='header'>
                 <img src="./images/Header.png" alt=''></img>
             </header>
             <div id='bannerdiv'>
                 {/* <img src="./images/navbar.png" alt=''></img> */}
-                <Navbar storeLogged={storeLogged} setSearchTerm={setSearchTerm} playersArr={players} />
+                <Navbar storeLogged={storeLogged} playersArr={players} />
                 <Login loggedIn={loggedIn} storeLogged={storeLogged} setStoreLoggedIn={setStoreLoggedIn} />
                 <Cart customer_id={filteredCustomerIDs[0]} />
             </div>
@@ -81,7 +81,7 @@ function App() {
                 </Switch>
             </div>
            
-        </>
+        </SearchContext.Provider>
     )
 };
 
