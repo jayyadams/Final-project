@@ -1,12 +1,12 @@
 .navbar {
-  background-color: teal; /* Set the background color of the navbar */
-  overflow: hidden; /* Ensure that content doesn't overflow the navbar */
-  position: fixed;
+  background-color: teal; 
+  overflow: hidden; 
 }
+
 
 .navbar a {
   float: left; /* Make the list items float to the left */
-  display: block; /* Make the links block-level elements */
+  display: block;
   color: white; /* Set the text color of the links */
   text-align: center; /* Center-align the text */
   padding: 14px 16px; /* Add padding to create space around the links */

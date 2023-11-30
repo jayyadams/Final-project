@@ -29,7 +29,7 @@ function Login({loggedIn, storeLogged, setStoreLoggedIn}) {
                 <Link customers={customers}  to="/Account_Manager"><button className="login-butt" >Account Manager</button></Link>:
                 <Link customers={customers}  to="/CustomerLogin"><button className="login-butt" >Login</button></Link>}
                 {storeLogged ? <button className="login-butt" onClick={(e) => setStoreLoggedIn(!storeLogged)} >Store Log Out</button> :
-                <Link stores={stores} to="/StoreLogin"><button className="login-butt" >StoreLogin</button></Link>}
+                <Link stores={stores} to="/StoreLogin"><button className="login-butt" >Store Login</button></Link>}
                 <Link to="/Register" ><button className="login-butt">Register New Account</button></Link>
             </span>
         </div>
